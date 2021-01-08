@@ -832,6 +832,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   &.text-center {
     text-align: center;
     padding: 50px 210px;
+    flex-direction: column;
   }
   .width-50:nth-child(2) {
     padding: 0 40px;
@@ -847,6 +848,36 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     align-self: flex-start;
     text-align: left;
   }
+}
+.thanks-para {
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 18px;
+  color: $primaryTextColor;
+  padding: 25px 0;
+}
+#progressbar {
+  width: 388px;
+  height: 14px;
+  border-radius: 7px;
+  background-color: #e3e3e3;
+  margin: auto;
+}
+.percentage {
+  font-size: 47px;
+  letter-spacing: -1px;
+  line-height: 48px;
+  color: #e3e3e3;
+  font-weight: 300;
+  text-align: center;
+  padding: 50px 0 20px 0;
+}
+#progressbar > div {
+  background-color: #f7b500;
+  width: 50%;
+  /* Adjust with JavaScript */
+  height: 100%;
+  border-radius: 7px;
 }
 .doc-info {
   padding: 10px 0;
@@ -917,7 +948,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
 .width-56 {
   max-width: 100%;
   width: 56%;
-  padding: 65px 75px;
+  padding: 60px;
   border: 1px solid #e2e2e3;
   border-radius: 10px;
   margin: 0 0 20px;

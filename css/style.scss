@@ -471,7 +471,6 @@ body {
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  padding: 0 0 60px 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $primaryTextColor;
@@ -483,7 +482,7 @@ body {
   padding: 100px 100px 50px;
   background-color: $whiteColor;
   border-radius: 20px;
-  margin: auto;
+  margin: auto auto 180px;
   box-shadow: -5px 30px 80px #07090f;
 }
 header {
@@ -523,8 +522,10 @@ header {
   cursor: pointer;
 }
 .title-h2 {
-  font-size: 1.4rem;
+  font-size: 47px;
   padding-bottom: 10px;
+  text-transform: uppercase;
+  color: $bgColor;
 }
 .para {
   font-weight: 300;
@@ -914,7 +915,6 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   color: $lightTextColor;
 }
 .form-select-wrap {
-  border: 1px solid $borderColor;
   border-radius: 5px;
   position: relative;
   &::after {
@@ -922,7 +922,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     content: " ";
     width: 12px;
     height: 12px;
-    top: 15px;
+    top: 10px;
     right: 15px;
     transform: rotate(45deg);
     z-index: 2;
@@ -933,11 +933,12 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     appearance: none;
     width: 100%;
     border: none;
-    padding: 15px;
-    color: $lightPrimary;
-    font-size: 0.9rem;
-    border-radius: 5px;
+    padding: 12px 15px;
+    color: $primaryTextColor;
+    font-size: 12px;
+    border-radius: 7px;
     cursor: pointer;
+    background-color: #f0f0f1;
   }
 }
 .form-input {
@@ -988,13 +989,14 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
 
 /*** File Upload ***/
 .file-upload-btn {
-  border-radius: 5px;
-  padding: 30px;
-  border: 1px solid $borderColor;
+  border-radius: 7px;
+  padding: 12px 15px;
+  font-size: 12px;
+  background-color: #f0f0f1;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $lightTextColor;
+  color: $primaryTextColor;
   width: 100%;
   i {
     margin-right: 10px;
@@ -1002,8 +1004,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
 }
 .supported-types {
   display: block;
-  text-align: right;
-  font-size: 0.8rem;
+  font-size: 10px;
   color: $lightPrimary;
   padding: 5px 0 20px;
 }
@@ -1487,7 +1488,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
 
 .sprite-upload-icon {
   width: 24px;
-  height: 20px;
+  height: 17px;
   background-position: -2px -75px;
 }
 

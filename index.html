@@ -187,11 +187,25 @@
             <div class="min-height-div">
               <div class="width-50">
                 <div class="form-control">
-                  <label class="form-label">Document Type</label>
+                  <label class="form-label">Country of document</label>
                   <div class="form-select-wrap">
                     <select name="docWithPhoto">
                       <option value="" id="idDocument" selected disabled>
                         Document Type
+                      </option>
+                      <option value="passport" id="idPassport">Passport</option>
+                      <option value="nationalId" id="idNatID">
+                        National ID
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-control">
+                  <label class="form-label">Document with your photo</label>
+                  <div class="form-select-wrap">
+                    <select name="docWithPhoto">
+                      <option value="drivingLicence" id="idDriLic">
+                        Driving Licence
                       </option>
                       <option value="passport" id="idPassport">Passport</option>
                       <option value="nationalId" id="idNatID">
@@ -217,7 +231,7 @@
                       accept="image/*"
                     />
                     <span class="supported-types"
-                      >Supported types: jpeg,png. Max size is 16MB</span
+                      >Supported types: jpeg,png. Max size is 5MB</span
                     >
                     <label class="form-label">Preview of Documents</label>
                     <div class="file-upload-content">

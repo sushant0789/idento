@@ -37,11 +37,31 @@
         <div class="head">
           <div class="language">
             <label class="language-label">Language</label>
-            <select class="select-box">
-              <option>English</option>
-              <option>Spanish</option>
-              <option>Chinese</option>
-            </select>
+            <div class="form-select-wrap">
+              <select name="language">
+                <option value="ar">Arabic</option>
+                <option value="zh">Chinese</option>
+                <option value="da">Danish</option>
+                <option value="nl">Dutch</option>
+                <option value="en" selected>English</option>
+                <option value="et">Estonian</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="is">Icelandic</option>
+                <option value="in">Indonesian</option>
+                <option value="it">Italian</option>
+                <option value="ja">Japanese</option>
+                <option value="ko">Korean</option>
+                <option value="no">Norwegian</option>
+                <option value="pl">Polish</option>
+                <option value="pt">Portuguese</option>
+                <option value="ro">Romanian</option>
+                <option value="ru">Russian</option>
+                <option value="es">Spanish</option>
+                <option value="sv">Swedish</option>
+                <option value="tr">Turkish</option>
+              </select>
+            </div>
           </div>
         </div>
         <form>
@@ -185,7 +205,7 @@
           <fieldset>
             <h2 class="title-h2">Document Information</h2>
             <div class="min-height-div">
-              <div class="width-50">
+              <div class="width-44">
                 <div class="form-control">
                   <label class="form-label">Country of document</label>
                   <div class="form-select-wrap">
@@ -215,14 +235,15 @@
                   </div>
                 </div>
                 <div class="form-control">
-                  <label class="form-label">Upload Your Image</label>
+                  <label class="form-label">Upload document with photo</label>
                   <div class="file-upload">
                     <button
                       class="file-upload-btn"
                       type="button"
                       onclick="$('.file-upload-input').trigger( 'click' )"
                     >
-                      <i class="sprite sprite-upload-icon"></i> Upload Images
+                      <i class="sprite sprite-upload-icon"></i> Upload Front
+                      Image
                     </button>
                     <input
                       class="file-upload-input"
@@ -233,38 +254,42 @@
                     <span class="supported-types"
                       >Supported types: jpeg,png. Max size is 5MB</span
                     >
-                    <label class="form-label">Preview of Documents</label>
-                    <div class="file-upload-content">
-                      <div class="upload-img">
-                        <img
-                          class="file-upload-image"
-                          src="img/upload-passport.jpg"
-                          alt="document image"
-                        />
-                      </div>
-                      <div class="image-title-wrap">
-                        <span class="image-title">passport.jpeg</span>
-                        <button
-                          type="button"
-                          onclick="removeUpload()"
-                          class="remove-image"
-                        >
-                          <i class="sprite sprite-remove"></i>
-                        </button>
-                      </div>
-                    </div>
+                  </div>
+                  <div class="file-upload">
+                    <button
+                      class="file-upload-btn"
+                      type="button"
+                      onclick="$('.file-upload-input').trigger( 'click' )"
+                    >
+                      <i class="sprite sprite-upload-icon"></i> Upload Back
+                      Image
+                    </button>
+                    <input
+                      class="file-upload-input"
+                      type="file"
+                      onchange="readURL(this);"
+                      accept="image/*"
+                    />
+                    <span class="supported-types"
+                      >Supported types: jpeg,png. Max size is 5MB</span
+                    >
                   </div>
                 </div>
               </div>
-              <div class="width-50">
-                <p class="upload-image-instructions">
-                  Please upload the images of chosen document. Make sure that
-                  the uploaded images is are of acceptable quality.
-                </p>
+              <div class="width-56 text-center">
                 <img
                   src="img/upload-images-quality.png"
                   alt="upload-images-quality"
                 />
+                <p class="upload-image-instructions">
+                  <span
+                    class="info-icon"
+                    data-tooltip="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                    >i</span
+                  >
+                  Please upload the images of chosen document. Make sure that
+                  the uploaded images is are of acceptable quality.
+                </p>
               </div>
             </div>
             <div class="bottom-nav">
@@ -275,24 +300,45 @@
           <fieldset>
             <h2 class="title-h2">Document Information</h2>
             <div class="min-height-div">
-              <div class="width-50">
+              <div class="width-44">
                 <div class="form-control">
-                  <label class="form-label">Document with your photo</label>
-                  <input
-                    type="button"
-                    value="Take Selfie"
-                    class="input-button-selfie"
-                  />
+                  <label class="form-label">Country of document</label>
+                  <div class="form-select-wrap">
+                    <select name="docWithPhoto">
+                      <option value="" id="idDocument" selected disabled>
+                        Document Type
+                      </option>
+                      <option value="passport" id="idPassport">Passport</option>
+                      <option value="nationalId" id="idNatID">
+                        National ID
+                      </option>
+                    </select>
+                  </div>
                 </div>
                 <div class="form-control">
-                  <label class="form-label">Upload Your Image</label>
+                  <label class="form-label">Document with your photo</label>
+                  <div class="form-select-wrap">
+                    <select name="docWithPhoto">
+                      <option value="drivingLicence" id="idDriLic">
+                        Driving Licence
+                      </option>
+                      <option value="passport" id="idPassport">Passport</option>
+                      <option value="nationalId" id="idNatID">
+                        National ID
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-control">
+                  <label class="form-label">Upload document with photo</label>
                   <div class="file-upload">
                     <button
                       class="file-upload-btn"
                       type="button"
                       onclick="$('.file-upload-input').trigger( 'click' )"
                     >
-                      <i class="sprite sprite-upload-icon"></i> Upload Images
+                      <i class="sprite sprite-upload-icon"></i> Upload Front
+                      Image
                     </button>
                     <input
                       class="file-upload-input"
@@ -301,40 +347,44 @@
                       accept="image/*"
                     />
                     <span class="supported-types"
-                      >Supported types: jpeg,png. Max size is 16MB</span
+                      >Supported types: jpeg,png. Max size is 5MB</span
                     >
-                    <label class="form-label">Preview of Documents</label>
-                    <div class="file-upload-content">
-                      <div class="upload-img">
-                        <img
-                          class="file-upload-image"
-                          src="img/upload-selfie.jpg"
-                          alt="document image"
-                        />
-                      </div>
-                      <div class="image-title-wrap">
-                        <span class="image-title">photo.jpeg</span>
-                        <button
-                          type="button"
-                          onclick="removeUpload()"
-                          class="remove-image"
-                        >
-                          <i class="sprite sprite-remove"></i>
-                        </button>
-                      </div>
-                    </div>
+                  </div>
+                  <div class="file-upload">
+                    <button
+                      class="file-upload-btn"
+                      type="button"
+                      onclick="$('.file-upload-input').trigger( 'click' )"
+                    >
+                      <i class="sprite sprite-upload-icon"></i> Upload Back
+                      Image
+                    </button>
+                    <input
+                      class="file-upload-input"
+                      type="file"
+                      onchange="readURL(this);"
+                      accept="image/*"
+                    />
+                    <span class="supported-types"
+                      >Supported types: jpeg,png. Max size is 5MB</span
+                    >
                   </div>
                 </div>
               </div>
-              <div class="width-50">
+              <div class="width-56 text-center">
+                <img
+                  src="img/upload-images-quality.png"
+                  alt="upload-images-quality"
+                />
                 <p class="upload-image-instructions">
+                  <span
+                    class="info-icon"
+                    data-tooltip="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                    >i</span
+                  >
                   Please upload the images of chosen document. Make sure that
                   the uploaded images is are of acceptable quality.
                 </p>
-                <img
-                  src="img/upload-selfie-quality.png"
-                  alt="upload-images-quality"
-                />
               </div>
             </div>
             <div class="bottom-nav">
@@ -343,88 +393,16 @@
             </div>
           </fieldset>
           <fieldset>
-            <div class="change-order">
-              <div class="technical-check-flex">
-                <div class="technical-check">
-                  <h2 class="title-h2">Technical Check</h2>
-                  <label class="form-label"
-                    >Lorem ipsum dolor sit amet, consectetur adipiscing acsd
-                    tincidunt erat consectetur adipiscing ac tincidunt
-                    erat</label
-                  >
-                </div>
-                <button type="button" class="input-button-check">
-                  <i class="sprite sprite-check-video"></i>
-                  Check Video
-                </button>
-                <button type="button" class="input-button-check">
-                  <i class="sprite sprite-check-audio"></i>
-                  Check Audio
-                </button>
-                <button type="button" class="input-button-check">
-                  <i class="sprite sprite-check-mic"></i>
-                  Check Microphone
-                </button>
-              </div>
-              <div class="min-height-div">
-                <div class="information-head">
-                  <input
-                    type="button"
-                    value="start verification call"
-                    class="input-button-verification"
-                  />
-                  <div class="online-agent show">
-                    <div class="agent-live-icon">
-                      <i class="sprite sprite-agent-icon"></i>
-                    </div>
-                    <div class="agent-live-count">
-                      <label class="form-label">Online Agent</label>
-                      <div><span> 05</span> Agent</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="information-flex-wrap">
-                  <div class="information-passport">
-                    <div class="information-body">
-                      <div class="info-image">
-                        <div class="info-bg">
-                          <i class="sprite sprite-video-icon"></i>
-                        </div>
-                        <span class="image-name">YOU</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="information-passport">
-                    <div class="information-body">
-                      <div class="info-image">
-                        <div class="info-bg">
-                          <i class="sprite sprite-video-icon"></i>
-                        </div>
-                        <span class="image-name">AGENT</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="information-passport">
-                    <div class="online-agent">
-                      <div class="agent-live-icon">
-                        <i class="sprite sprite-agent-icon"></i>
-                      </div>
-                      <div class="agent-live-count">
-                        <label class="form-label">Online Agent</label>
-                        <div><span> 05</span> Agent</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="min-height-div text-center">
+              <h2 class="title-h2">Thank you for your submission</h2>
             </div>
             <div class="bottom-nav">
-              <input type="button" value="Back" class="input-button-back" />
               <input
                 type="button"
                 value="Finish"
                 class="input-button-next last"
               />
+              <input type="button" value="Back" class="input-button-back" />
             </div>
           </fieldset>
         </form>

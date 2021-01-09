@@ -481,9 +481,9 @@ body {
   width: 1090px;
   padding: 100px 100px 50px;
   background-color: $whiteColor;
-  border-radius: 20px;
   margin: auto auto 180px;
-  box-shadow: -5px 30px 80px #07090f;
+  border-radius: 25px;
+  filter: drop-shadow(-4.693px 29.631px 40px #07090f);
 }
 header {
   max-width: 100%;
@@ -1135,6 +1135,18 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   bottom: 0;
   left: 0;
   z-index: 99;
+}
+.popup-wrap {
+  background-color: #fff;
+  filter: drop-shadow(9.988px 19.602px 45px rgba(12, 18, 29, 0.8));
+  border-radius: 15px;
+  width: 600px;
+  height: 520px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-top: -260px;
+  margin-left: -300px;
 }
 
 /*** File Upload ***/

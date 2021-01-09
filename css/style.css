@@ -480,6 +480,8 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 100px 0 25px;
+  position: relative;
+  z-index: 999;
 }
 
 .head {
@@ -1247,6 +1249,17 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   -webkit-transform: translateX(11px) translateY(-40%);
           transform: translateX(11px) translateY(-40%);
   width: calc(100vw - 80vw);
+}
+
+/*** Popup for take photo ***/
+#popup {
+  background: rgba(35, 43, 67, 0.82);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
 }
 
 /*** File Upload ***/

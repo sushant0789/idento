@@ -493,6 +493,8 @@ header {
   flex-direction: row;
   justify-content: space-between;
   padding: 100px 0 25px;
+  position: relative;
+  z-index: 999;
 }
 .head {
   display: flex;
@@ -1122,6 +1124,17 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
       }
     }
   }
+}
+
+/*** Popup for take photo ***/
+#popup {
+  background: rgba(35, 43, 67, 0.82);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
 }
 
 /*** File Upload ***/

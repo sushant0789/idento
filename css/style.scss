@@ -450,14 +450,10 @@ $primaryTextColor: #000;
 $lightTextColor: lighten($primaryTextColor, 26%);
 $checkboxBg: #e2e2e3;
 $progressBorder: #596171;
-$infoBg: #ccc;
 $cubic: cubic-bezier(0.64, 0.09, 0.08, 1);
 $borderColor: rgba(34, 39, 40, 0.05);
 $lightPrimary: lighten($primaryTextColor, 40%);
 $lightBorder: lighten($primaryTextColor, 70%);
-$removeColor: #e21616;
-$successColor: #39c911;
-$agentColor: #0093a8;
 
 /*** Start with main page css ***/
 

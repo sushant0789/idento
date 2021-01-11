@@ -1141,12 +1141,26 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   filter: drop-shadow(9.988px 19.602px 45px rgba(12, 18, 29, 0.8));
   border-radius: 15px;
   width: 600px;
-  height: 520px;
+  height: 600px;
   left: 50%;
   top: 50%;
   position: absolute;
-  margin-top: -260px;
+  margin-top: -300px;
   margin-left: -300px;
+  padding: 35px 45px;
+  text-align: center;
+  h4 {
+    padding: 0 0 25px 0;
+  }
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+.input-button-take-photo {
+  margin: 30px 0 0;
 }
 
 /*** File Upload ***/
@@ -1664,25 +1678,38 @@ form fieldset {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   body {
-    padding: 20px;
+    padding: 20px 25px 50px 25px;
+    background-attachment: fixed;
   }
   .container {
     padding: 30px 20px;
     width: 768px;
     margin: auto;
   }
+  header {
+    padding: 15px 0;
+  }
   .head {
     padding: 0 0 30px;
   }
   .progress-bar {
-    max-width: 85%;
+    max-width: 65%;
     margin: 25px auto;
   }
   .progress-bar li {
     font-size: 0.8rem;
   }
-  .width-50 {
-    padding: 0 20px 0 0;
+  .width-44 {
+    padding: 0 50px 0 0;
+  }
+  .width-56 {
+    padding: 30px;
+    img {
+      max-width: 100%;
+    }
+  }
+  .min-height-div.text-center {
+    padding: 50px 100px;
   }
   .min-height-div .width-50:nth-child(2) {
     padding: 0 0 0 20px;
@@ -1811,6 +1838,9 @@ form fieldset {
   .container {
     padding: 15px;
   }
+  header {
+    padding: 15px 0;
+  }
   .head {
     padding-bottom: 25px;
   }
@@ -1829,11 +1859,14 @@ form fieldset {
   .supported-types {
     font-size: 0.7rem;
   }
+  .title-h2 {
+    font-size: 24px;
+  }
   .progress-bar {
-    max-width: 80%;
+    max-width: 50%;
     margin: 20px auto 15px;
     li:first-child span {
-      left: 0;
+      left: -30%;
     }
     li.is-active span {
       opacity: 1;
@@ -1851,9 +1884,16 @@ form fieldset {
       margin-left: -20px;
     }
   }
-  .width-50 {
+  .width-44 {
     width: 100%;
     padding: 0;
+  }
+  .width-56 {
+    width: 100%;
+    padding: 20px;
+    img {
+      max-width: 100%;
+    }
   }
   .min-height-div .width-50:nth-child(2) {
     padding: 0 0 40px;
@@ -2013,6 +2053,32 @@ form fieldset {
       order: 1;
     }
   }
+  .popup-wrap {
+    width: auto;
+    height: auto;
+    left: 15px;
+    right: 15px;
+    transform: translateX(0) translateY(-120%);
+    height: 350px;
+    margin: 0;
+    padding: 20px;
+    img {
+      max-width: 100%;
+      max-height: 210px;
+    }
+    h4 {
+      padding: 0 0 15px 0;
+    }
+    .input-button-take-photo {
+      margin: 12px 0 0;
+    }
+  }
+  .min-height-div.text-center {
+    padding: 30px;
+  }
+  #progressbar {
+    width: 100%;
+  }
 }
 
 @media (min-width: 550px) and (max-width: 767px) {
@@ -2096,5 +2162,8 @@ form fieldset {
   }
   .tooltip-modal .tooltip {
     transform: translateX(0) translateY(30px);
+  }
+  [class*="input-button"] {
+    padding: 10px 35px;
   }
 }

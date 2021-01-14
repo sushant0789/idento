@@ -410,36 +410,39 @@ fieldset {
 // Fonts
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("fonts/Montserrat-Regular.eot");
-  src: url("fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"),
-    url("fonts/Montserrat-Regular.woff") format("woff"),
-    url("fonts/Montserrat-Regular.ttf") format("truetype"),
-    url("fonts/Montserrat-Regular.svg#Montserrat-Regular") format("svg");
+  font-family: "Avenir";
+  src: url("fonts/Avenir-Heavy.eot");
+  src: url("fonts/Avenir-Heavy.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Avenir-Heavy.woff") format("woff"),
+    url("fonts/Avenir-Heavy.ttf") format("truetype"),
+    url("fonts/Avenir-Heavy.svg#Avenir-Heavy") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("fonts/Avenir-Roman.eot");
+  src: url("fonts/Avenir-Roman.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Avenir-Roman.woff") format("woff"),
+    url("fonts/Avenir-Roman.ttf") format("truetype"),
+    url("fonts/Avenir-Roman.svg#Avenir-Roman") format("svg");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("fonts/Montserrat-Light.eot");
-  src: url("fonts/Montserrat-Light.eot?#iefix") format("embedded-opentype"),
-    url("fonts/Montserrat-Light.woff") format("woff"),
-    url("fonts/Montserrat-Light.ttf") format("truetype"),
-    url("fonts/Montserrat-Light.svg#Montserrat-Light") format("svg");
+  font-family: "Avenir";
+  src: url("fonts/Avenir-Light.eot");
+  src: url("fonts/Avenir-Light.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Avenir-Light.woff") format("woff"),
+    url("fonts/Avenir-Light.ttf") format("truetype"),
+    url("fonts/Avenir-Light.svg#Avenir-Light") format("svg");
   font-weight: 300;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("fonts/Montserrat-Bold.eot");
-  src: url("fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"),
-    url("fonts/Montserrat-Bold.woff") format("woff"),
-    url("fonts/Montserrat-Bold.ttf") format("truetype"),
-    url("fonts/Montserrat-Bold.svg#Montserrat-Bold") format("svg");
-  font-weight: bold;
-  font-style: normal;
+  font-display: swap;
 }
 
 /* common functions scss */
@@ -462,7 +465,8 @@ $lightBorder: lighten($primaryTextColor, 70%);
   padding: 0;
 }
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Avenir";
+  font-weight: normal;
   background-image: url("../img/bg.jpg"); /* The image used */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -470,7 +474,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $primaryTextColor;
-  font-size: 1rem;
+  font-size: 14px;
 }
 .container {
   max-width: 100%;
@@ -509,34 +513,22 @@ header {
   }
 }
 .language-label {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   padding: 0 10px 0 0;
 }
-.select-box {
-  background-color: $whiteColor;
-  color: $selectBoxColor;
-  padding: 8px 20px 8px 10px;
-  width: auto;
-  border: 1px solid #000;
-  border-radius: 7px;
-  font-size: 0.8rem;
-  -webkit-appearance: button;
-  appearance: button;
-  outline: none;
-  cursor: pointer;
-}
+
 .title-h2 {
   font-size: 47px;
   padding-bottom: 10px;
   text-transform: uppercase;
   color: $bgColor;
-  font-weight: bold;
+  font-weight: 900;
 }
 .para {
-  font-weight: 300;
   color: $lightTextColor;
   line-height: 2rem;
+  font-size: 16px;
 }
 .rights-ul {
   padding: 35px 0 20px 30px;
@@ -554,6 +546,7 @@ header {
     width: 15px;
     height: 15px;
     color: $whiteColor;
+    background-color: #ccc;
     display: inline-block;
     text-align: center;
     font-size: 0.5rem;
@@ -638,7 +631,7 @@ input[type="checkbox"].css-checkbox + label.css-label {
   display: inline-block;
   background-repeat: no-repeat;
   background-position: 0 0;
-  font-size: 14px;
+  font-size: 16px;
   vertical-align: middle;
   cursor: pointer;
 }
@@ -963,7 +956,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   }
 }
 [class*="form-label"] {
-  font-size: 0.8rem;
+  font-size: 14px;
   padding-bottom: 10px;
   color: $lightTextColor;
 }
@@ -1006,10 +999,10 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   border: none;
   padding: 12px 15px;
   color: $primaryTextColor;
-  font-size: 12px;
+  font-size: 14px;
   border-radius: 7px;
   cursor: pointer;
-  line-height: 16px;
+  line-height: 18px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1162,6 +1155,8 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   text-align: center;
   h4 {
     padding: 0 0 25px 0;
+    font-size: 18px;
+    font-weight: 900;
   }
 }
 .close-btn {
@@ -1191,7 +1186,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
 }
 .supported-types {
   display: block;
-  font-size: 10px;
+  font-size: 11px;
   color: $lightPrimary;
   padding: 5px 0 20px;
 }

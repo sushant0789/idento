@@ -37,8 +37,8 @@
         <div class="head">
           <div class="language">
             <label class="language-label">Language</label>
-            <div class="form-select-wrap">
-              <select name="language">
+            
+              <select name="language" class="select-box">
                 <option value="ar">Arabic</option>
                 <option value="zh">Chinese</option>
                 <option value="da">Danish</option>
@@ -61,7 +61,7 @@
                 <option value="sv">Swedish</option>
                 <option value="tr">Turkish</option>
               </select>
-            </div>
+            
           </div>
         </div>
         <form>
@@ -208,8 +208,8 @@
               <div class="width-44">
                 <div class="form-control">
                   <label class="form-label">Country of document</label>
-                  <div class="form-select-wrap">
-                    <select name="docWithPhoto">
+                  
+                    <select name="docWithPhoto" class="select-box">
                       <option value="" id="idDocument" selected disabled>
                         Document Type
                       </option>
@@ -218,12 +218,12 @@
                         National ID
                       </option>
                     </select>
-                  </div>
+                  
                 </div>
                 <div class="form-control">
                   <label class="form-label">Document with your photo</label>
-                  <div class="form-select-wrap">
-                    <select name="docWithPhoto">
+                  
+                    <select name="docWithPhoto" class="select-box">
                       <option value="drivingLicence" id="idDriLic">
                         Driving Licence
                       </option>
@@ -232,7 +232,7 @@
                         National ID
                       </option>
                     </select>
-                  </div>
+                  
                 </div>
                 <div class="form-control">
                   <label class="form-label">Upload document with photo</label>
@@ -303,8 +303,8 @@
               <div class="width-44">
                 <div class="form-control">
                   <label class="form-label">Country of document</label>
-                  <div class="form-select-wrap">
-                    <select name="docWithPhoto">
+                  
+                    <select name="docWithPhoto" class="select-box">
                       <option value="" id="idDocument" selected disabled>
                         Document Type
                       </option>
@@ -313,12 +313,12 @@
                         National ID
                       </option>
                     </select>
-                  </div>
+                  
                 </div>
                 <div class="form-control">
                   <label class="form-label">Document with your photo</label>
-                  <div class="form-select-wrap">
-                    <select name="docWithPhoto">
+                  
+                    <select name="docWithPhoto" class="select-box">
                       <option value="drivingLicence" id="idDriLic">
                         Driving Licence
                       </option>
@@ -327,7 +327,7 @@
                         National ID
                       </option>
                     </select>
-                  </div>
+                  
                 </div>
                 <div class="form-control">
                   <label class="form-label">Upload document with photo</label>
@@ -449,6 +449,12 @@
         <span>Verifying document...</span>
       </div>
     </div>
+    <button id="clickme">Click Me To Open Select Box</button>
+<select id="choose" name="choose" style=display:none;"">
+  <option value="burger">Burger</option>
+  <option value="fries">French Fries</option>
+  <option value="banana">Banana</option>
+</select>
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/all-min.js" async defer></script>

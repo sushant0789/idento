@@ -463,12 +463,6 @@ body {
   border-radius: 25px;
   -webkit-filter: drop-shadow(-4.693px 29.631px 40px #07090f);
           filter: drop-shadow(-4.693px 29.631px 40px #07090f);
-  -moz-transform: scale(0.8) translateX(0) translateY(-15%);
-  /* Moz-browsers */
-  zoom: 0.8;
-  /* Other non-webkit browsers */
-  zoom: 80%;
-  /* Webkit browsers */
 }
 
 header {
@@ -488,12 +482,6 @@ header {
   padding: 100px 0 25px;
   position: relative;
   z-index: 999;
-  -moz-transform: scale(0.8) translateX(0) translateY(-15%);
-  /* Moz-browsers */
-  zoom: 0.8;
-  /* Other non-webkit browsers */
-  zoom: 80%;
-  /* Webkit browsers */
 }
 
 .head {
@@ -521,11 +509,10 @@ header {
           align-items: center;
 }
 
-.language .form-select-wrap select {
+.language .select-box {
   padding: 12px 35px 12px 10px;
-  background: none;
+  background: url(../img/dropdown.png) 90% center no-repeat #fff;
   border: 1px solid #000;
-  line-height: 16px;
 }
 
 .language-label {
@@ -554,6 +541,7 @@ header {
   padding-bottom: 10px;
   text-transform: uppercase;
   color: #16bbe3;
+  font-weight: bold;
 }
 
 .para {
@@ -1109,6 +1097,27 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   border-radius: 7px;
   cursor: pointer;
   background-color: #f0f0f1;
+  line-height: 16px;
+}
+
+.select-box {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  background: url(../img/dropdown.png) 96% center no-repeat #f0f0f1;
+  display: block;
+  text-indent: 0.01px;
+  width: 100%;
+  border: none;
+  padding: 12px 15px;
+  color: #000;
+  font-size: 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  line-height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .form-input {
@@ -1988,6 +1997,18 @@ form fieldset.active {
   width: 100%;
 }
 
+@media only screen and (min-width: 1113px) {
+  .container,
+  header {
+    -moz-transform: scale(0.8) translateX(0) translateY(-15%);
+    /* Moz-browsers */
+    zoom: 0.8;
+    /* Other non-webkit browsers */
+    zoom: 80%;
+    /* Webkit browsers */
+  }
+}
+
 /*** Responsive for tablets ***/
 @media (min-width: 1025px) and (max-width: 1112px) {
   body {
@@ -2407,10 +2428,8 @@ form fieldset.active {
     height: auto;
     left: 15px;
     right: 15px;
-    -webkit-transform: translateX(0) translateY(-120%);
-            transform: translateX(0) translateY(-120%);
     height: 350px;
-    margin: 0;
+    margin: -460px 0 0;
     padding: 20px;
   }
   .popup-wrap img {

@@ -2000,7 +2000,7 @@ form fieldset.active {
 @media only screen and (min-width: 1113px) {
   .container,
   header {
-    -moz-transform: scale(0.8) translateX(0) translateY(-15%);
+    -moz-transform: scale(0.8) translateX(0) translateY(-18%);
     /* Moz-browsers */
     zoom: 0.8;
     /* Other non-webkit browsers */

@@ -463,6 +463,12 @@ body {
   border-radius: 25px;
   -webkit-filter: drop-shadow(-4.693px 29.631px 40px #07090f);
           filter: drop-shadow(-4.693px 29.631px 40px #07090f);
+  -moz-transform: scale(0.8) translateX(0) translateY(-15%);
+  /* Moz-browsers */
+  zoom: 0.8;
+  /* Other non-webkit browsers */
+  zoom: 80%;
+  /* Webkit browsers */
 }
 
 header {
@@ -482,6 +488,12 @@ header {
   padding: 100px 0 25px;
   position: relative;
   z-index: 999;
+  -moz-transform: scale(0.8) translateX(0) translateY(-15%);
+  /* Moz-browsers */
+  zoom: 0.8;
+  /* Other non-webkit browsers */
+  zoom: 80%;
+  /* Webkit browsers */
 }
 
 .head {
@@ -566,7 +578,6 @@ header {
 .custom-checkbox .info-icon {
   position: relative;
   cursor: pointer;
-  background-color: #ccc;
   border-radius: 50%;
   width: 15px;
   height: 15px;
@@ -731,6 +742,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
 
 .input-button-back:hover {
   color: #fff;
+  background-color: #666666;
 }
 
 /*** Progress Bar ***/
@@ -1011,17 +1023,8 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   padding: 0 0 25px;
 }
 
-#successMsg {
-  color: #39c911;
-}
-
 #errorMsg {
-  color: #e21616;
   display: none;
-}
-
-.error-Msg {
-  color: #e21616;
 }
 
 .width-50 {
@@ -1174,7 +1177,6 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   position: absolute;
   left: 0;
   cursor: pointer;
-  background-color: #ccc;
   border-radius: 50%;
   width: 15px;
   height: 15px;
@@ -1520,7 +1522,6 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
 }
 
 .which-doc {
-  color: #e21616;
   font-size: 1.4rem;
   text-align: center;
   width: 100%;
@@ -1706,7 +1707,6 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
 .result-text-wrap h4 {
   text-align: center;
   font-weight: bold;
-  color: #39c911;
   padding: 0 0 15px;
 }
 
@@ -1773,7 +1773,6 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  color: #39c911;
   font-weight: bold;
 }
 
@@ -1798,12 +1797,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   margin: 0 20px 0 0;
 }
 
-.edit-remove .input-button-remove {
-  color: #e21616;
-}
-
 .edit-remove .input-button-remove:hover, .edit-remove .input-button-remove:focus, .edit-remove .input-button-remove:active {
-  background-color: #e21616;
   color: #fff;
 }
 
@@ -1878,7 +1872,6 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border: 2px solid #0093a8;
   border-radius: 30px;
   position: relative;
   height: 60px;
@@ -1897,7 +1890,6 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 50%;
-  background-color: #0093a8;
   position: absolute;
   left: -2px;
   top: -2px;
@@ -1921,7 +1913,6 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
 }
 
 .online-agent .agent-live-count div {
-  color: #0093a8;
   font-size: 0.8rem;
 }
 

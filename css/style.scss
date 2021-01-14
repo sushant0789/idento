@@ -480,6 +480,9 @@ body {
   margin: auto auto 180px;
   border-radius: 25px;
   filter: drop-shadow(-4.693px 29.631px 40px #07090f);
+  -moz-transform: scale(0.8) translateX(0) translateY(-15%); /* Moz-browsers */
+  zoom: 0.8; /* Other non-webkit browsers */
+  zoom: 80%; /* Webkit browsers */
 }
 header {
   max-width: 100%;
@@ -491,6 +494,9 @@ header {
   padding: 100px 0 25px;
   position: relative;
   z-index: 999;
+  -moz-transform: scale(0.8) translateX(0) translateY(-15%); /* Moz-browsers */
+  zoom: 0.8; /* Other non-webkit browsers */
+  zoom: 80%; /* Webkit browsers */
 }
 .head {
   display: flex;
@@ -550,7 +556,6 @@ header {
   .info-icon {
     position: relative;
     cursor: pointer;
-    background-color: $infoBg;
     border-radius: 50%;
     width: 15px;
     height: 15px;
@@ -700,6 +705,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   color: lighten($primaryTextColor, 40%);
   &:hover {
     color: $whiteColor;
+    background-color: lighten($primaryTextColor, 40%);
   }
 }
 
@@ -923,15 +929,11 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   font-weight: bold;
   padding: 0 0 25px;
 }
-#successMsg {
-  color: $successColor;
-}
+
 #errorMsg {
-  color: $removeColor;
   display: none;
 }
 .error-Msg {
-  color: $removeColor;
 }
 .width-50 {
   max-width: 100%;
@@ -1050,7 +1052,6 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     position: absolute;
     left: 0;
     cursor: pointer;
-    background-color: $infoBg;
     border-radius: 50%;
     width: 15px;
     height: 15px;
@@ -1303,7 +1304,6 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   }
 }
 .which-doc {
-  color: $removeColor;
   font-size: 1.4rem;
   text-align: center;
   width: 100%;
@@ -1425,7 +1425,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   h4 {
     text-align: center;
     font-weight: bold;
-    color: $successColor;
+
     padding: 0 0 15px;
   }
   p {
@@ -1477,7 +1477,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   background-color: $whiteColor;
   flex-direction: column;
   text-align: center;
-  color: $successColor;
+
   font-weight: bold;
   span {
     padding: 15px 40px;
@@ -1494,11 +1494,10 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   }
   .input-button-remove {
     @extend .input-button-edit;
-    color: $removeColor;
+
     &:hover,
     &:focus,
     &:active {
-      background-color: $removeColor;
       color: $whiteColor;
     }
   }
@@ -1549,7 +1548,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   margin: 0 0 50px 0;
   display: flex;
   flex-direction: row;
-  border: 2px solid $agentColor;
+
   border-radius: 30px;
   position: relative;
   height: 60px;
@@ -1560,7 +1559,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color: $agentColor;
+
     position: absolute;
     left: -2px;
     top: -2px;
@@ -1575,7 +1574,6 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
       padding: 0 0 2px;
     }
     div {
-      color: $agentColor;
       font-size: 0.8rem;
       span {
         font-size: 1.3rem;

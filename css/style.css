@@ -735,7 +735,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   padding: 0;
   max-width: 100%;
   width: 760px;
-  margin: auto 70px;
+  margin: 10px 70px auto;
 }
 
 .progress-bar li {

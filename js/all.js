@@ -35,6 +35,8 @@ $(document).on("click", ".input-button-next", function() {
     .addClass("is-complete");
 });
 
+
+
 $(document).on("click", ".input-button-back", function() {
   $(this)
     .closest("fieldset")
@@ -68,6 +70,10 @@ $(".progress-bar li:last-child.is-active")
 
 $(document).on("click", ".close-btn", function() {
   $("#popup").fadeOut();
+});
+
+$(document).on("click", ".popup-click", function() {
+  $("#popup").fadeIn();
 });
 
 $(document).on(

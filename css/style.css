@@ -467,6 +467,7 @@ body {
   border-radius: 25px;
   -webkit-filter: drop-shadow(-4.693px 29.631px 40px #07090f);
           filter: drop-shadow(-4.693px 29.631px 40px #07090f);
+  position: relative;
 }
 
 header {
@@ -1261,6 +1262,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   bottom: 0;
   left: 0;
   z-index: 99;
+  display: none;
 }
 
 .popup-wrap {
@@ -1268,13 +1270,13 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   -webkit-filter: drop-shadow(9.988px 19.602px 45px rgba(12, 18, 29, 0.8));
           filter: drop-shadow(9.988px 19.602px 45px rgba(12, 18, 29, 0.8));
   border-radius: 15px;
-  width: 600px;
-  height: 600px;
+  width: 480px;
+  height: 480px;
   left: 50%;
   top: 50%;
   position: absolute;
-  margin-top: -300px;
-  margin-left: -300px;
+  margin-top: -240px;
+  margin-left: -240px;
   padding: 35px 45px;
   text-align: center;
 }
@@ -1283,6 +1285,10 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   padding: 0 0 25px 0;
   font-size: 18px;
   font-weight: 900;
+}
+
+.popup-wrap img {
+  max-width: 100%;
 }
 
 .close-btn {

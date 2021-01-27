@@ -286,7 +286,11 @@
               </div>
             </div>
             <div class="bottom-nav">
-              <input type="button" value="Next" class="input-button-next" />
+              <input
+                type="button"
+                value="Next"
+                class="input-button-next popup-click"
+              />
               <input type="button" value="Back" class="input-button-back" />
             </div>
           </fieldset>
@@ -378,18 +382,6 @@
               <input type="button" value="Next" class="input-button-next" />
               <input type="button" value="Back" class="input-button-back" />
             </div>
-            <div id="popup">
-              <div class="popup-wrap">
-                <span class="close-btn">x</span>
-                <h4>Camera</h4>
-                <img src="img/photo.jpg" alt="" srcset="" />
-                <input
-                  type="button"
-                  value="Take Photo"
-                  class="input-button-take-photo"
-                />
-              </div>
-            </div>
           </fieldset>
           <fieldset>
             <div class="min-height-div text-center">
@@ -422,6 +414,18 @@
         </form>
       </div>
     </main>
+    <div id="popup">
+      <div class="popup-wrap">
+        <span class="close-btn">x</span>
+        <h4>Camera</h4>
+        <img src="img/photo.jpg" alt="" srcset="" />
+        <input
+          type="button"
+          value="Take Photo"
+          class="input-button-take-photo"
+        />
+      </div>
+    </div>
     <link rel="stylesheet" href="css/style-min.css" />
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/all-min.js" async defer></script>

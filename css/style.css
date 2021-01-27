@@ -2422,13 +2422,14 @@ form fieldset.active {
             order: 1;
   }
   .popup-wrap {
-    width: auto;
+    width: 100%;
     height: auto;
     left: 15px;
     right: 15px;
     height: 350px;
-    margin: -460px 0 0;
+    margin: -175px auto auto;
     padding: 20px;
+    max-width: 350px;
   }
   .popup-wrap img {
     max-width: 100%;

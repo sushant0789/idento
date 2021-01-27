@@ -1270,13 +1270,13 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   -webkit-filter: drop-shadow(9.988px 19.602px 45px rgba(12, 18, 29, 0.8));
           filter: drop-shadow(9.988px 19.602px 45px rgba(12, 18, 29, 0.8));
   border-radius: 15px;
-  width: 480px;
-  height: 480px;
+  width: 600px;
+  height: 580px;
   left: 50%;
   top: 50%;
   position: absolute;
   margin-top: -240px;
-  margin-left: -240px;
+  margin-left: -300px;
   padding: 35px 45px;
   text-align: center;
 }
@@ -1997,7 +1997,8 @@ form fieldset.active {
 
 @media only screen and (min-width: 1113px) {
   .container,
-  header {
+  header,
+  .popup-wrap {
     -moz-transform: scale(0.8) translateX(0) translateY(-18%);
     /* Moz-browsers */
     zoom: 0.8;
